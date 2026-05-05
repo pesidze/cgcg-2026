@@ -48,7 +48,18 @@
       ]
     }
   }
-  </script>
+  
+  /* ── Burger / drawer ── */
+  (function(){
+    var burger=document.querySelector('.nav-burger'),drawer=document.querySelector('.nav-drawer'),nav=document.getElementById('site-nav');
+    if(!burger||!drawer)return;
+    burger.addEventListener('click',function(){
+      var open=nav.classList.toggle('nav-open');
+      drawer.style.display=open?'flex':'none';
+      document.body.style.overflow=open?'hidden':'';
+    });
+  })();
+</script>
 
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -413,6 +424,8 @@
     @media (max-width:960px) {
       .site-nav { padding:16px 48px; }
       .nav-links { display:none; }
+      .nav-cta { display:none; }
+      .nav-burger { display:flex; margin-left:auto; }
       .hero { grid-template-columns:1fr; grid-template-rows:auto auto; min-height:auto; padding-top:40px; }
       .hero-net { display:none; }
       .hero-inner { grid-column:1; grid-row:1; padding:60px 48px 40px; align-self:start; }
@@ -451,6 +464,18 @@
       .footer-form input { height:52px; font-size:13px; }
       .footer-send { width:100%; text-align:center; padding:14px 24px; margin-top:24px; }
     }
+  
+    /* ── Mobile nav burger + drawer ── */
+    .nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;margin-left:auto;flex-shrink:0}
+    .nav-burger span{display:block;width:20px;height:1.5px;background:#fff;border-radius:2px;transition:transform .22s ease,opacity .22s ease,width .22s ease}
+    .site-nav.nav-open .nav-burger span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+    .site-nav.nav-open .nav-burger span:nth-child(2){opacity:0;width:0}
+    .site-nav.nav-open .nav-burger span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+    .nav-drawer{position:fixed;top:0;left:0;right:0;bottom:0;background:#0a1020;z-index:96;display:flex;flex-direction:column;padding:100px 28px 48px;overflow-y:auto}
+    .nav-drawer-links{list-style:none;padding:0;margin:0 0 36px;border-top:1px solid rgba(255,255,255,.08)}
+    .nav-drawer-links li{border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav-drawer-links a{display:flex;align-items:center;font-size:28px;line-height:1;letter-spacing:-.022em;color:#fff;text-decoration:none;padding:20px 0;min-height:64px}
+    .nav-drawer-cta{display:flex;align-items:center;justify-content:center;background:#fff;color:#1a1a1a;text-decoration:none;padding:18px 24px;border-radius:999px;font-size:17px;font-family:'NB',sans-serif;text-align:center;margin-bottom:24px;min-height:56px}
   </style>
 </head>
 <body>
@@ -459,7 +484,7 @@
 
 <nav class="site-nav" id="site-nav" aria-label="Main navigation">
   <a class="nav-logo" href="/">
-    <img src="/logowhite.svg" alt="Cyber Guardian Consulting Group">
+    <img src="/imgs/logowhite.svg" alt="Cyber Guardian Consulting Group">
   </a>
   <ul class="nav-links">
     <li class="nav-has-drop">
@@ -494,8 +519,23 @@
     <li><a href="/about/">About</a></li>
   </ul>
   <a class="nav-cta" href="https://cgcg.biz/contact">Get a Free Assessment</a>
+<button class="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></button>
 </nav>
 
+
+<div class="nav-drawer" style="display:none">
+  <ul class="nav-drawer-links">
+    <li><a href="/managed-it-services/">Managed IT Services</a></li>
+    <li><a href="/NaaS/">Network as a Service</a></li>
+    <li><a href="/infrastructure-connectivity/">Infrastructure Connectivity</a></li>
+    <li><a href="/cybersecurity-solutions/">Cybersecurity Solutions</a></li>
+    <li><a href="/cloud-security-cameras/">Cloud Security Cameras</a></li>
+    <li><a href="/door-access-control/">Door Access Control</a></li>
+    <li><a href="/low-voltage-cabling/">Low Voltage Cabling</a></li>
+    <li><a href="/about/">About</a></li>
+  </ul>
+  <a class="nav-drawer-cta" href="https://cgcg.biz/contact">Get a Free Assessment</a>
+</div>
 <main id="main-content">
 
 <!-- Hero -->
@@ -1236,7 +1276,7 @@
 <footer class="site-footer" id="contact">
   <nav class="footer-nav" aria-label="Footer navigation">
     <a class="footer-logo" href="/">
-      <img src="/logowhite.svg" alt="Cyber Guardian Consulting Group">
+      <img src="/imgs/logowhite.svg" alt="Cyber Guardian Consulting Group">
     </a>
     <ul class="footer-nav-links">
       <li><a href="/services/">Services</a></li>

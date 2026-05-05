@@ -220,6 +220,7 @@
       transform: translateY(20px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
+    .services-left h2 .accent { color: inherit; }
 
     .services-desc {
       font-size: var(--f-sm);
@@ -362,21 +363,66 @@
         padding: 60px 48px;
         gap: 40px;
       }
-      .services-grid { grid-template-columns: 1fr; }
-      .svc-card {
-        border-right: none !important;
-        border-bottom: 1px solid #dedede !important;
-        padding: 40px 48px;
-      }
-      .svc-card:last-child { border-bottom: none !important; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .svc-card { padding: 40px 36px; }
+      .svc-card:nth-child(3),
+      .svc-card:nth-child(4) { border-bottom: none; }
     }
 
     @media (max-width: 600px) {
       .hero-left { padding: 52px 24px 36px; }
       .hero-buttons { flex-direction: column; align-items: flex-start; }
 
-      .services-left { padding: 48px 24px; }
-      .svc-card { padding: 32px 24px; }
+      /* ── UNIFIED SYSTEM — mobile makeover ── */
+      .services { border-top: none; }
+
+      .services-left {
+        background: #0d1525;
+        border-bottom: none;
+        padding: 56px 24px 60px;
+        gap: 28px;
+      }
+      .services-left::before {
+        content: 'Our Approach';
+        display: block;
+        font-family: 'NB', sans-serif;
+        font-size: 10px;
+        letter-spacing: .2em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,.35);
+        margin-bottom: 4px;
+      }
+      .services-left h2 {
+        color: #fff;
+        font-size: clamp(38px, 11vw, 54px);
+        line-height: 1.05;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      .services-left h2 .accent { color: #C8FF47; }
+      .services-desc {
+        color: rgba(255,255,255,.55);
+        max-width: none;
+        font-size: 15px;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .svc-card {
+        padding: 28px 18px !important;
+        border-right: 1px solid #dedede !important;
+        border-bottom: 1px solid #dedede !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      .svc-card:nth-child(even) { border-right: none !important; }
+      .svc-card:nth-child(3),
+      .svc-card:nth-child(4)    { border-bottom: none !important; }
+      .svc-card-top { margin-bottom: 14px; }
+      .svc-card h3 { font-size: 18px; line-height: 1.15; }
+      .svc-card p { font-size: 13px; line-height: 1.6; }
+      .svc-arrow { font-size: 16px; }
     }
     /* ── GUARDIAN PULSE ── */
     .pulse-sec {
@@ -1722,14 +1768,14 @@
     .site-nav{padding:0 20px;height:56px}
     .nav-logo img{height:36px}
     .nav-links,.nav-cta{display:none}
-    .nav-burger{display:flex}
+    .nav-burger{display:flex;margin-left:auto}
   }
   </style>
 </head>
 <body>
 
   <nav class="site-nav" id="site-nav">
-    <a class="nav-logo" href="/"><img src="/logowhite.svg" alt="Cyber Guardian Consulting Group"></a>
+    <a class="nav-logo" href="/"><img src="/imgs/logowhite.svg" alt="Cyber Guardian Consulting Group"></a>
     <ul class="nav-links">
       <li class="nav-has-drop">
         <a class="nav-link-services" href="/services/">Services<svg class="nav-drop-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -1782,7 +1828,7 @@
 
     <div class="hero-left">
       <div class="hero-left-top">
-        <h1>We make your IT<br>chaos disappear</h1>
+        <h1>We make your IT chaos disappear</h1>
         <div class="hero-buttons">
           <a class="btn-primary" href="/contact">Let's Talk</a>
           <a class="btn-secondary" href="/managed-it-services2">Explore Services</a>
@@ -9520,7 +9566,7 @@
   <section class="services">
 
     <div class="services-left">
-      <h2>We create a Unified System</h2>
+      <h2>We create a <span class="accent">Unified</span> System</h2>
       <p class="services-desc">CGCG operates as a connected system across infrastructure, security, and operations. Every request activates multiple layers at once — coordinated, monitored, and continuously optimized.</p>
     </div>
 
@@ -10529,7 +10575,7 @@
 
     <nav class="footer-nav">
       <a class="footer-logo" href="/">
-        <img src="/logowhite.svg" alt="CGCG">
+        <img src="/imgs/logowhite.svg" alt="CGCG">
       </a>
       <ul class="footer-nav-links">
         <li><a href="/services">Services</a></li>
