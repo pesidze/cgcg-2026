@@ -26,14 +26,14 @@
 
     @font-face {
       font-family: 'NL';
-      src: url('../L.woff2') format('woff2');
+      src: url('/fonts/n.woff2') format('woff2');
       font-weight: 400;
       font-style: normal;
       font-display: swap;
     }
     @font-face {
       font-family: 'NB';
-      src: url('../nbold.woff2') format('woff2');
+      src: url('/fonts/nbold.woff2') format('woff2');
       font-weight: 700;
       font-style: normal;
       font-display: swap;
@@ -1804,11 +1804,12 @@
   .nav-cta{background:#C8FF47;color:#0a1020;text-decoration:none;padding:11px 22px;border-radius:999px;font-size:13.5px;font-weight:700;white-space:nowrap;border:1px solid transparent;transition:background .15s ease,transform .15s ease,box-shadow .15s ease;flex-shrink:0;display:inline-flex;align-items:center;gap:8px}
   .nav-cta:hover{background:#d4ff66;transform:translateY(-1px);box-shadow:0 6px 20px rgba(200,255,71,0.35)}
   .nav-cta::after{content:'';width:6px;height:6px;border-radius:50%;background:#0a1020;opacity:0.7}
-  .nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:10px;border-radius:999px}
-  .nav-burger span{display:block;width:20px;height:2px;background:#fff;border-radius:2px;transition:transform .22s ease,opacity .22s ease,width .22s ease}
-  .site-nav.nav-open .nav-burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-  .site-nav.nav-open .nav-burger span:nth-child(2){opacity:0;width:0}
-  .site-nav.nav-open .nav-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .nav-cta-mobile,.nav-status-mobile{display:none}
+.nav-burger{display:none;flex-direction:column;justify-content:center;align-items:center;width:38px;height:38px;border-radius:50%;padding:0;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);cursor:pointer;-webkit-tap-highlight-color:transparent;flex-shrink:0}
+.nav-burger span{display:block;width:14px;height:1.6px;background:#fff;border-radius:2px;transition:transform .22s ease,opacity .22s ease,width .22s ease}
+.site-nav.nav-open .nav-burger span:nth-child(1){transform:translateY(6.6px) rotate(45deg)}
+.site-nav.nav-open .nav-burger span:nth-child(2){opacity:0;width:0}
+.site-nav.nav-open .nav-burger span:nth-child(3){transform:translateY(-6.6px) rotate(-45deg)}
   /* Dropdown */
   .nav-has-drop{position:static}
   .nav-link-services{display:inline-flex;align-items:center;gap:5px;color:rgba(255,255,255,0.7);text-decoration:none;font-size:13.5px;letter-spacing:-.005em;padding:8px 14px;border-radius:999px;transition:color .14s ease,background .14s ease}
@@ -1825,18 +1826,25 @@
   .ndc-link:hover{color:#fff;padding-left:6px}
   .ndc-desc{font-size:12px;line-height:1.5;color:rgba(255,255,255,.4);margin:0 0 16px;font-style:normal;letter-spacing:.01em}
   /* Drawer */
-  .nav-drawer{position:fixed;top:0;left:0;right:0;bottom:0;background:#0a1020;z-index:96;display:flex;flex-direction:column;padding:100px 28px 48px;overflow-y:auto}
-  .nav-drawer-links{list-style:none;padding:0;margin:0 0 36px;border-top:1px solid rgba(255,255,255,.08)}
-  .nav-drawer-links li{border-bottom:1px solid rgba(255,255,255,.08)}
-  .nav-drawer-links a{display:flex;align-items:center;font-size:28px;line-height:1;letter-spacing:-.022em;color:#fff;text-decoration:none;padding:20px 0;min-height:64px}
-  .nav-drawer-cta{display:flex;align-items:center;justify-content:center;background:#fff;color:#1a1a1a;text-decoration:none;padding:18px 24px;border-radius:999px;font-size:17px;font-family:'NB',sans-serif;text-align:center;margin-bottom:24px;min-height:56px}
+  @keyframes navPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.85)}}
+.nav-drawer{position:fixed;left:12px;right:12px;top:64px;bottom:12px;background:rgba(10,16,32,0.94);backdrop-filter:blur(32px) saturate(180%);border:1px solid rgba(255,255,255,0.1);border-radius:28px;box-shadow:0 30px 80px rgba(0,0,0,0.5);z-index:96;display:flex;flex-direction:column;padding:22px 22px 28px;overflow-y:auto;opacity:0;transform:translateY(20px) scale(0.98);transition:opacity .25s ease,transform .25s ease;pointer-events:none}
+.nav-drawer.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:all}
+.nav-drawer-cta{display:flex;align-items:center;justify-content:space-between;background:#C8FF47;color:#0a1020;text-decoration:none;padding:18px 22px;border-radius:18px;font-family:'NB',sans-serif;font-weight:700;font-size:16px;margin-bottom:20px}
+.nav-drawer-section{border-bottom:1px solid rgba(255,255,255,0.08)}
+.nav-drawer-section summary{display:flex;align-items:center;justify-content:space-between;padding:14px 4px;cursor:pointer;list-style:none;font-family:'NB',sans-serif;font-weight:700;font-size:18px;color:#fff}
+.nav-drawer-section summary::-webkit-details-marker{display:none}
+.nav-drawer-links{display:flex;flex-direction:column;padding:0 4px 12px}
+.nav-drawer-links a{color:rgba(255,255,255,0.55);text-decoration:none;font-size:15px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);transition:color .14s ease}
+.nav-drawer-links a:last-child{border-bottom:none}
+.nav-drawer-links a:active{color:#fff}
   @media(max-width:1100px){.site-nav .nav-links li:not(.nav-has-drop){display:none}}
-  @media(max-width:768px){
-    .site-nav{top:12px;padding:6px 6px 6px 14px;gap:8px;width:calc(100% - 24px)}
-    .nav-logo img{height:28px}
-    .nav-links,.nav-cta{display:none}
-    .nav-burger{display:flex}
-  }
+  @media(max-width:768px){.site-nav{top:12px;padding:5px 5px 5px 14px;gap:8px;width:calc(100% - 20px);max-width:560px;background:rgba(10,16,32,0.78);border:1px solid rgba(255,255,255,0.1);box-shadow:0 14px 36px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.08)}
+.nav-links,.nav-cta{display:none}
+.nav-status-mobile{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;flex-shrink:0;background:rgba(200,255,71,0.1);border:1px solid rgba(200,255,71,0.2);margin-right:auto;margin-left:2px}
+.nav-status-mobile .nav-status-dot{width:7px;height:7px;border-radius:50%;background:#C8FF47;box-shadow:0 0 8px rgba(200,255,71,0.7);animation:navPulse 1.8s ease-in-out infinite}
+.nav-cta-mobile{display:inline-flex;align-items:center;gap:6px;background:#C8FF47;color:#0a1020;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:12.5px;font-family:'NB',sans-serif;font-weight:700;letter-spacing:-.005em;white-space:nowrap;flex-shrink:0;transition:background .15s ease,transform .15s ease}
+.nav-burger{display:flex;width:38px;height:38px;border-radius:50%;padding:0;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);gap:5px;margin-left:0}
+.nav-burger span{width:14px;height:1.6px}}
 
   /* ── Partners Marquee ── */
   .partners-marquee{background:#0a1020;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:28px 0;overflow:hidden}
@@ -1901,30 +1909,51 @@
       <li><a href="/about/">About</a></li>
     </ul>
     <a class="nav-cta" href="https://cgcg.biz/contact">Get a Free Assessment</a>
-    <button class="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <div class="nav-status-mobile" aria-label="24/7 SOC operations live"><span class="nav-status-dot" aria-hidden="true"></span></div><a class="nav-cta-mobile" href="https://cgcg.biz/contact" aria-label="Get a free assessment">Free assessment<svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><button class="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </nav>
 
-  <div class="nav-drawer" style="display:none">
-  <ul class="nav-drawer-links">
-    <li><a href="/managed-it-services/">Managed IT Services</a></li>
-    <li><a href="/NaaS/">Network as a Service</a></li>
-    <li><a href="/low-voltage-cabling/">Low Voltage Cabling</a></li>
-    <li><a href="/cloud-security-cameras/">Cloud Security Cameras</a></li>
-    <li><a href="/door-access-control/">Door Access Control</a></li>
-    <li><a href="/cybersecurity-solutions/">Cybersecurity Solutions</a></li>
-    <li><a href="/socas/">SOC as a Service</a></li>
-    <li><a href="/cisoaas/">CISO as a Service</a></li>
-    <li><a href="/private-digital-investigations/">Private Digital Investigations</a></li>
-    <li><a href="/cioas/">CIO as a Service</a></li>
-    <li><a href="/ctoas/">CTO as a Service</a></li>
-    <li><a href="/erp-solutions/">ERP Solutions</a></li>
-    <li><a href="/app-development/">App Development</a></li>
-    <li><a href="/reputation-management/">Reputation Management</a></li>
-    <li><a href="/recycling-charity/">Recycling &amp; Charity</a></li>
-    <li><a href="/healthcare-it/">Healthcare IT</a></li>
-    <li><a href="/about/">About</a></li>
-  </ul>
-  <a class="nav-drawer-cta" href="https://cgcg.biz/contact">Get a Free Assessment</a>
+  <div class="nav-drawer">
+  <a class="nav-drawer-cta" href="https://cgcg.biz/contact">
+    Get a free assessment
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 L15 5 M15 5 H7 M15 5 V13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+  <details class="nav-drawer-section" open>
+    <summary>Infrastructure</summary>
+    <div class="nav-drawer-links">
+      <a href="/managed-it-services/">Managed IT Services</a>
+      <a href="/NaaS/">Network as a Service</a>
+      <a href="/low-voltage-cabling/">Low Voltage Cabling</a>
+      <a href="/cloud-security-cameras/">Cloud Security Cameras</a>
+      <a href="/door-access-control/">Door Access Control</a>
+      <a href="https://switchboard-plus.com" target="_blank" rel="noopener">Business Phone (VoIP) &#x2197;</a>
+    </div>
+  </details>
+  <details class="nav-drawer-section">
+    <summary>Cybersecurity</summary>
+    <div class="nav-drawer-links">
+      <a href="/cybersecurity-solutions/">Cybersecurity Solutions</a>
+      <a href="/socas/">SOC as a Service</a>
+      <a href="/cisoaas/">CISO as a Service</a>
+      <a href="/private-digital-investigations/">Private Digital Investigations</a>
+    </div>
+  </details>
+  <details class="nav-drawer-section">
+    <summary>Operations</summary>
+    <div class="nav-drawer-links">
+      <a href="/cioas/">CIO as a Service</a>
+      <a href="/ctoas/">CTO as a Service</a>
+      <a href="/erp-solutions/">ERP Solutions</a>
+      <a href="/app-development/">App Development</a>
+      <a href="/reputation-management/">Reputation Management</a>
+      <a href="/recycling-charity/">Recycling &amp; Charity</a>
+    </div>
+  </details>
+  <details class="nav-drawer-section">
+    <summary>Company</summary>
+    <div class="nav-drawer-links">
+      <a href="/about/">About</a>
+    </div>
+  </details>
 </div>
 
   <section class="hero">
@@ -10793,7 +10822,7 @@
   if(!burger||!drawer)return;
   burger.addEventListener('click',function(){
     var open=nav.classList.toggle('nav-open');
-    drawer.style.display=open?'flex':'none';
+    drawer.classList.toggle('is-open',open);
     document.body.style.overflow=open?'hidden':'';
   });
 })();

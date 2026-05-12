@@ -5,10 +5,10 @@
 <meta name="description" content="Professional private digital investigations and digital forensics in New York and the Hudson Valley.">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
-@font-face{font-family:'NL';font-weight:400;font-style:normal;font-display:swap;src:url('../L.woff2') format('woff2')}
-@font-face{font-family:'NB';font-weight:700;font-style:normal;font-display:swap;src:url('../nbold.woff2') format('woff2')}
-@font-face{font-family:'Nexa';font-weight:400;font-display:swap;src:url('../L.woff2') format('woff2')}
-@font-face{font-family:'Nexa';font-weight:700;font-display:swap;src:url('../nbold.woff2') format('woff2')}
+@font-face{font-family:'NL';font-weight:400;font-style:normal;font-display:swap;src:url('/fonts/n.woff2') format('woff2')}
+@font-face{font-family:'NB';font-weight:700;font-style:normal;font-display:swap;src:url('/fonts/nbold.woff2') format('woff2')}
+@font-face{font-family:'Nexa';font-weight:400;font-display:swap;src:url('/fonts/n.woff2') format('woff2')}
+@font-face{font-family:'Nexa';font-weight:700;font-display:swap;src:url('/fonts/nbold.woff2') format('woff2')}
 :root{--ink:rgb(21,21,21);--black:#000;--navy:rgb(43,53,78);--navy-deep:rgb(20,27,42);--slate:rgb(106,106,132);--paper:rgb(250,250,250);--white:#fff;--cream:#ffffff;--lime:#C8FF47;--coral:#FF6A55;--cobalt:#2E3BFF;--sky:#BDE4FF;--font:'Nexa','Helvetica Neue',Helvetica,Arial,sans-serif;--mono:ui-monospace,SF Mono,Menlo,monospace;--ease:cubic-bezier(0.22,0.61,0.36,1)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--font);letter-spacing:-0.018em;-webkit-font-smoothing:antialiased;line-height:1.4}a{color:inherit;text-decoration:none;cursor:pointer;transition:opacity 120ms var(--ease)}a:hover{opacity:0.7}button{font-family:inherit;letter-spacing:inherit;border:0;background:none}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.4)}}
@@ -22,15 +22,34 @@
 .site-nav.nav-light{color:#1a1a1a}.site-nav.nav-light .nav-links>li>a,.site-nav.nav-light .nav-link-services{color:rgba(20,20,20,.75)}.site-nav.nav-light .nav-links>li>a:hover,.site-nav.nav-light .nav-link-services:hover{color:#1a1a1a}.site-nav.nav-light .nav-links{background:transparent;border-color:transparent}.site-nav.nav-light .nav-cta{background:transparent;color:#1a1a1a;border-color:rgba(0,0,0,.35)}.site-nav.nav-light .nav-burger span{background:#1a1a1a}
 .nav-logo img{height:44px;width:auto;display:block}.nav-links{list-style:none;display:flex;gap:0;margin:0 auto;padding:0;align-items:center}.nav-links>li>a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px;letter-spacing:-.01em;padding:8px 18px;transition:color .14s ease;white-space:nowrap}.nav-links>li>a:hover{color:#fff}
 .nav-cta{background:#fff;color:#1a1a1a;text-decoration:none;padding:10px 22px;border-radius:999px;font-size:14px;font-family:'NB',sans-serif;white-space:nowrap;flex-shrink:0;transition:background .14s ease,transform .14s ease}.nav-cta:hover{background:#e8e8e8;transform:translateY(-1px);opacity:1}
-.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:10px;margin-left:8px;min-width:44px;min-height:44px;align-items:center}.nav-burger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .22s ease,opacity .22s ease,width .22s ease}
-.site-nav.nav-open .nav-burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}.site-nav.nav-open .nav-burger span:nth-child(2){opacity:0;width:0}.site-nav.nav-open .nav-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.nav-drawer{position:fixed;top:0;left:0;right:0;bottom:0;background:#0E1628;z-index:98;display:flex;flex-direction:column;padding:100px 28px 48px;overflow-y:auto}.nav-drawer-links{list-style:none;padding:0;margin:0 0 36px;border-top:1px solid rgba(255,255,255,.08)}.nav-drawer-links li{border-bottom:1px solid rgba(255,255,255,.08)}.nav-drawer-links a{display:flex;align-items:center;font-size:28px;line-height:1;letter-spacing:-0.022em;color:#fff;text-decoration:none;padding:20px 0;min-height:64px}
-.nav-drawer-cta{display:flex;align-items:center;justify-content:center;background:var(--cobalt);color:#fff;text-decoration:none;padding:18px 24px;border-radius:10px;font-size:17px;font-family:'NB',sans-serif;text-align:center;margin-bottom:24px}
+.nav-cta-mobile,.nav-status-mobile{display:none}
+.nav-burger{display:none;flex-direction:column;justify-content:center;align-items:center;width:38px;height:38px;border-radius:50%;padding:0;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);cursor:pointer;-webkit-tap-highlight-color:transparent;flex-shrink:0}
+.nav-burger span{display:block;width:14px;height:1.6px;background:#fff;border-radius:2px;transition:transform .22s ease,opacity .22s ease,width .22s ease}
+.site-nav.nav-open .nav-burger span:nth-child(1){transform:translateY(6.6px) rotate(45deg)}
+.site-nav.nav-open .nav-burger span:nth-child(2){opacity:0;width:0}
+.site-nav.nav-open .nav-burger span:nth-child(3){transform:translateY(-6.6px) rotate(-45deg)}
+@keyframes navPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.85)}}
+.nav-drawer{position:fixed;left:12px;right:12px;top:64px;bottom:12px;background:rgba(10,16,32,0.94);backdrop-filter:blur(32px) saturate(180%);border:1px solid rgba(255,255,255,0.1);border-radius:28px;box-shadow:0 30px 80px rgba(0,0,0,0.5);z-index:96;display:flex;flex-direction:column;padding:22px 22px 28px;overflow-y:auto;opacity:0;transform:translateY(20px) scale(0.98);transition:opacity .25s ease,transform .25s ease;pointer-events:none}
+.nav-drawer.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:all}
+.nav-drawer-cta{display:flex;align-items:center;justify-content:space-between;background:#C8FF47;color:#0a1020;text-decoration:none;padding:18px 22px;border-radius:18px;font-family:'NB',sans-serif;font-weight:700;font-size:16px;margin-bottom:20px}
+.nav-drawer-section{border-bottom:1px solid rgba(255,255,255,0.08)}
+.nav-drawer-section summary{display:flex;align-items:center;justify-content:space-between;padding:14px 4px;cursor:pointer;list-style:none;font-family:'NB',sans-serif;font-weight:700;font-size:18px;color:#fff}
+.nav-drawer-section summary::-webkit-details-marker{display:none}
+.nav-drawer-links{display:flex;flex-direction:column;padding:0 4px 12px}
+.nav-drawer-links a{color:rgba(255,255,255,0.55);text-decoration:none;font-size:15px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);transition:color .14s ease}
+.nav-drawer-links a:last-child{border-bottom:none}
+.nav-drawer-links a:active{color:#fff}
 .nav-has-drop{position:static}.nav-link-services{display:inline-flex;align-items:center;gap:5px;color:rgba(255,255,255,.65);text-decoration:none;font-size:14px;letter-spacing:-.01em;transition:color .14s ease;padding:7px 16px;border-radius:999px}.nav-link-services:hover,.nav-has-drop.is-open .nav-link-services{color:#fff;background:rgba(255,255,255,.1)}.nav-drop-chevron{transition:transform 200ms ease;flex-shrink:0}.nav-has-drop.is-open .nav-drop-chevron{transform:rotate(180deg)}
 .nav-drop{position:absolute;top:100%;left:0;right:0;background:#1a1a1a;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.1);padding:36px 80px 44px;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity 180ms ease,transform 180ms ease,visibility 0ms linear 180ms;pointer-events:none;z-index:98;box-shadow:0 24px 60px rgba(0,0,0,.5)}.nav-has-drop.is-open .nav-drop{opacity:1;visibility:visible;transform:none;transition:opacity 180ms ease,transform 180ms ease;pointer-events:all}
 .ndc-label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fff;display:block;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:12px;text-decoration:none;font-family:'NB',sans-serif}a.ndc-label:hover{color:rgba(255,255,255,.65)}.ndc-link{display:block;font-size:14px;color:rgba(255,255,255,.52);padding:7px 0;text-decoration:none;letter-spacing:-.01em;transition:color .14s ease;border-bottom:1px solid rgba(255,255,255,.05);line-height:1.3}.ndc-link:last-child{border-bottom:none}.ndc-link:hover{color:#fff}
   .ndc-desc{font-size:12px;line-height:1.5;color:rgba(255,255,255,.38);margin:0 0 16px;font-style:normal;letter-spacing:.01em}
-@media(max-width:768px){.site-nav{padding:0 20px;height:60px}.nav-logo img{height:36px}.nav-links,.nav-cta{display:none}.nav-burger{display:flex;margin-left:auto}}
+@media(max-width:768px){.site-nav{top:12px;padding:5px 5px 5px 14px;gap:8px;width:calc(100% - 20px);max-width:560px;background:rgba(10,16,32,0.78);border:1px solid rgba(255,255,255,0.1);box-shadow:0 14px 36px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.08)}
+.nav-links,.nav-cta{display:none}
+.nav-status-mobile{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;flex-shrink:0;background:rgba(200,255,71,0.1);border:1px solid rgba(200,255,71,0.2);margin-right:auto;margin-left:2px}
+.nav-status-mobile .nav-status-dot{width:7px;height:7px;border-radius:50%;background:#C8FF47;box-shadow:0 0 8px rgba(200,255,71,0.7);animation:navPulse 1.8s ease-in-out infinite}
+.nav-cta-mobile{display:inline-flex;align-items:center;gap:6px;background:#C8FF47;color:#0a1020;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:12.5px;font-family:'NB',sans-serif;font-weight:700;letter-spacing:-.005em;white-space:nowrap;flex-shrink:0;transition:background .15s ease,transform .15s ease}
+.nav-burger{display:flex;width:38px;height:38px;border-radius:50%;padding:0;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);gap:5px;margin-left:0}
+.nav-burger span{width:14px;height:1.6px}}
 .hero{position:relative;padding:120px 0 100px;min-height:700px;overflow:hidden;background:#0E1628;color:#fff}.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(46,59,255,0.1),transparent 60%);pointer-events:none}
 .hero-burst{position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:780px;height:780px;pointer-events:none;opacity:0.9}
 .hero-inner{position:relative;padding-left:129px;max-width:760px;z-index:3}
@@ -120,29 +139,50 @@
     <li><a href="/about/">About</a></li>
   </ul>
   <a class="nav-cta" href="https://cgcg.biz/contact">Get a Free Assessment</a>
-  <button class="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <div class="nav-status-mobile" aria-label="24/7 SOC operations live"><span class="nav-status-dot" aria-hidden="true"></span></div><a class="nav-cta-mobile" href="https://cgcg.biz/contact" aria-label="Get a free assessment">Free assessment<svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><button class="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></button>
 </nav>
-<div class="nav-drawer" style="display:none">
-  <ul class="nav-drawer-links">
-    <li><a href="/managed-it-services/">Managed IT Services</a></li>
-    <li><a href="/NaaS/">Network as a Service</a></li>
-    <li><a href="/low-voltage-cabling/">Low Voltage Cabling</a></li>
-    <li><a href="/cloud-security-cameras/">Cloud Security Cameras</a></li>
-    <li><a href="/door-access-control/">Door Access Control</a></li>
-    <li><a href="/cybersecurity-solutions/">Cybersecurity Solutions</a></li>
-    <li><a href="/socas/">SOC as a Service</a></li>
-    <li><a href="/cisoaas/">CISO as a Service</a></li>
-    <li><a href="/private-digital-investigations/">Private Digital Investigations</a></li>
-    <li><a href="/cioas/">CIO as a Service</a></li>
-    <li><a href="/ctoas/">CTO as a Service</a></li>
-    <li><a href="/erp-solutions/">ERP Solutions</a></li>
-    <li><a href="/app-development/">App Development</a></li>
-    <li><a href="/reputation-management/">Reputation Management</a></li>
-    <li><a href="/recycling-charity/">Recycling &amp; Charity</a></li>
-    <li><a href="/healthcare-it/">Healthcare IT</a></li>
-    <li><a href="/about/">About</a></li>
-  </ul>
-  <a class="nav-drawer-cta" href="https://cgcg.biz/contact">Get a Free Assessment</a>
+<div class="nav-drawer">
+  <a class="nav-drawer-cta" href="https://cgcg.biz/contact">
+    Get a free assessment
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 L15 5 M15 5 H7 M15 5 V13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+  <details class="nav-drawer-section" open>
+    <summary>Infrastructure</summary>
+    <div class="nav-drawer-links">
+      <a href="/managed-it-services/">Managed IT Services</a>
+      <a href="/NaaS/">Network as a Service</a>
+      <a href="/low-voltage-cabling/">Low Voltage Cabling</a>
+      <a href="/cloud-security-cameras/">Cloud Security Cameras</a>
+      <a href="/door-access-control/">Door Access Control</a>
+      <a href="https://switchboard-plus.com" target="_blank" rel="noopener">Business Phone (VoIP) &#x2197;</a>
+    </div>
+  </details>
+  <details class="nav-drawer-section">
+    <summary>Cybersecurity</summary>
+    <div class="nav-drawer-links">
+      <a href="/cybersecurity-solutions/">Cybersecurity Solutions</a>
+      <a href="/socas/">SOC as a Service</a>
+      <a href="/cisoaas/">CISO as a Service</a>
+      <a href="/private-digital-investigations/">Private Digital Investigations</a>
+    </div>
+  </details>
+  <details class="nav-drawer-section">
+    <summary>Operations</summary>
+    <div class="nav-drawer-links">
+      <a href="/cioas/">CIO as a Service</a>
+      <a href="/ctoas/">CTO as a Service</a>
+      <a href="/erp-solutions/">ERP Solutions</a>
+      <a href="/app-development/">App Development</a>
+      <a href="/reputation-management/">Reputation Management</a>
+      <a href="/recycling-charity/">Recycling &amp; Charity</a>
+    </div>
+  </details>
+  <details class="nav-drawer-section">
+    <summary>Company</summary>
+    <div class="nav-drawer-links">
+      <a href="/about/">About</a>
+    </div>
+  </details>
 </div>
 
 <section class="hero">
@@ -630,7 +670,7 @@ document.documentElement.classList.add('js');
   updateNav();
 })();
   var burger=document.querySelector('.nav-burger'),drawer=document.querySelector('.nav-drawer');
-  if(burger&&drawer){burger.addEventListener('click',function(){var o=nav.classList.toggle('nav-open');drawer.style.display=o?'flex':'none';document.body.style.overflow=o?'hidden':'';burger.setAttribute('aria-label',o?'Close menu':'Open menu');});drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('nav-open');drawer.style.display='none';document.body.style.overflow='';});});}
+  if(burger&&drawer){burger.addEventListener('click',function(){var o=nav.classList.toggle('nav-open');drawer.classList.toggle('is-open',o);document.body.style.overflow=o?'hidden':'';burger.setAttribute('aria-label',o?'Close menu':'Open menu');});drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('nav-open');drawer.classList.remove('is-open');document.body.style.overflow='';});});}
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.08});
   document.querySelectorAll('.reveal,.stag').forEach(function(el){io.observe(el);});
   var brows=document.querySelectorAll('.brow'),bio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');bio.unobserve(e.target);}});},{threshold:0.05});
