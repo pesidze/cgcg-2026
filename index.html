@@ -1796,7 +1796,8 @@
   .pm-track:hover{animation-play-state:paused}
   .pm-item{display:flex;align-items:center;justify-content:center;padding:0 48px;opacity:.55;transition:opacity .2s ease;flex-shrink:0}
   .pm-item:hover{opacity:1}
-  .pm-item svg{display:block}
+  .pm-item svg,.pm-item img{display:block}
+  .pm-item img{filter:brightness(0) invert(1)}
   </style>
 </head>
 <body>
@@ -9617,177 +9618,42 @@
     <div class="pm-track">
 
       <!-- ── SET 1 ── -->
-      <!-- IBM -->
-      <div class="pm-item">
-        <svg width="66" height="26" viewBox="0 0 66 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="0" y="0" width="10" height="3.2" rx=".4" fill="white"/><rect x="0" y="4.8" width="10" height="3.2" rx=".4" fill="white"/><rect x="2" y="9.6" width="6" height="3.2" rx=".4" fill="white"/><rect x="2" y="14.4" width="6" height="3.2" rx=".4" fill="white"/><rect x="0" y="19.2" width="10" height="3.2" rx=".4" fill="white"/><rect x="0" y="24" width="10" height="2" rx=".4" fill="white"/>
-          <rect x="14" y="0" width="10" height="26" rx=".4" fill="white"/>
-          <rect x="28" y="0" width="10" height="3.2" rx=".4" fill="white"/><rect x="28" y="0" width="3" height="13" rx=".4" fill="white"/><rect x="28" y="22.8" width="10" height="3.2" rx=".4" fill="white"/><rect x="35" y="11.4" width="3" height="3.2" rx=".4" fill="white"/><rect x="28" y="11.4" width="10" height="3.2" rx=".4" fill="white"/><rect x="35" y="0" width="3" height="13" rx=".4" fill="white"/><rect x="28" y="13" width="3" height="13" rx=".4" fill="white"/><rect x="35" y="13" width="3" height="13" rx=".4" fill="white"/>
-          <rect x="42" y="0" width="10" height="3.2" rx=".4" fill="white"/><rect x="42" y="4.8" width="10" height="3.2" rx=".4" fill="white"/><rect x="44" y="9.6" width="6" height="3.2" rx=".4" fill="white"/><rect x="44" y="14.4" width="6" height="3.2" rx=".4" fill="white"/><rect x="42" y="19.2" width="10" height="3.2" rx=".4" fill="white"/><rect x="42" y="24" width="10" height="2" rx=".4" fill="white"/>
-        </svg>
-      </div>
-
-      <!-- AWS -->
-      <div class="pm-item">
-        <svg width="60" height="36" viewBox="0 0 60 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <text x="30" y="17" font-family="Arial,sans-serif" font-size="17" font-weight="800" fill="white" text-anchor="middle" letter-spacing="-0.5">aws</text>
-          <path d="M13 27 Q30 33 47 27" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <path d="M44 24 L47 27 L44 30" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-
-      <!-- Google Cloud -->
-      <div class="pm-item">
-        <svg width="120" height="28" viewBox="0 0 120 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <text x="0" y="21" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="white" letter-spacing="-0.3">Google</text>
-          <text x="74" y="21" font-family="Arial,sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.7)" letter-spacing="-0.3">Cloud</text>
-        </svg>
-      </div>
-
-      <!-- GoDaddy -->
-      <div class="pm-item">
-        <svg width="100" height="28" viewBox="0 0 100 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <text x="0" y="21" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="white">GoDaddy</text>
-        </svg>
-      </div>
-
-      <!-- Microsoft -->
-      <div class="pm-item">
-        <svg width="132" height="28" viewBox="0 0 132 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="0" y="0" width="12" height="12" fill="rgba(255,255,255,0.9)"/>
-          <rect x="14" y="0" width="12" height="12" fill="rgba(255,255,255,0.6)"/>
-          <rect x="0" y="14" width="12" height="12" fill="rgba(255,255,255,0.6)"/>
-          <rect x="14" y="14" width="12" height="12" fill="rgba(255,255,255,0.9)"/>
-          <text x="32" y="21" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="300" fill="white" letter-spacing="0">Microsoft</text>
-        </svg>
-      </div>
-
-      <!-- Cisco -->
-      <div class="pm-item">
-        <svg width="80" height="34" viewBox="0 0 80 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="0" y="6" width="6" height="12" rx="1" fill="white"/>
-          <rect x="9" y="2" width="6" height="20" rx="1" fill="white"/>
-          <rect x="18" y="0" width="6" height="24" rx="1" fill="white"/>
-          <rect x="27" y="2" width="6" height="20" rx="1" fill="white"/>
-          <rect x="36" y="6" width="6" height="12" rx="1" fill="white"/>
-          <text x="0" y="34" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="1">cisco</text>
-        </svg>
-      </div>
-
-      <!-- DHS -->
-      <div class="pm-item">
-        <svg width="62" height="36" viewBox="0 0 62 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M31 2 L58 12 L58 22 Q58 30 31 34 Q4 30 4 22 L4 12 Z" stroke="white" stroke-width="1.5" fill="none"/>
-          <text x="31" y="21" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="white" text-anchor="middle" letter-spacing="0.5">DHS</text>
-        </svg>
-      </div>
-
-      <!-- Spectrum -->
-      <div class="pm-item">
-        <svg width="90" height="24" viewBox="0 0 90 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <text x="0" y="18" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white" letter-spacing="-0.3">Spectrum</text>
-          <text x="84" y="18" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="rgba(255,255,255,0.6)">›</text>
-        </svg>
-      </div>
-
-      <!-- IAPP -->
-      <div class="pm-item">
-        <svg width="54" height="28" viewBox="0 0 54 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <text x="0" y="24" font-family="Georgia,serif" font-size="26" font-weight="400" fill="white" letter-spacing="-1">iapp</text>
-        </svg>
-      </div>
-
-      <!-- APWG -->
-      <div class="pm-item">
-        <svg width="72" height="28" viewBox="0 0 72 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="0" y="0" width="72" height="28" rx="2" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-          <text x="36" y="20" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle" letter-spacing="1.5">APWG</text>
-        </svg>
-      </div>
-
-      <!-- ISACA -->
-      <div class="pm-item">
-        <svg width="80" height="28" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="8" cy="8" r="3" fill="white" opacity="0.8"/>
-          <circle cx="20" cy="4" r="3" fill="white" opacity="0.8"/>
-          <circle cx="32" cy="4" r="3" fill="white" opacity="0.8"/>
-          <circle cx="44" cy="8" r="3" fill="white" opacity="0.8"/>
-          <text x="0" y="26" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="white" letter-spacing="2">ISACA</text>
-        </svg>
-      </div>
-
-      <!-- Identity Mgmt. Institute -->
-      <div class="pm-item">
-        <svg width="50" height="36" viewBox="0 0 50 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="25" cy="10" r="8" stroke="white" stroke-width="1.5" fill="none"/>
-          <path d="M10 34 Q25 22 40 34" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <text x="25" y="13" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="white" text-anchor="middle">IMI</text>
-        </svg>
-      </div>
-
-      <!-- ISC2 -->
-      <div class="pm-item">
-        <svg width="60" height="28" viewBox="0 0 60 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <text x="0" y="22" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="white">(ISC)</text>
-          <text x="50" y="14" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white">2</text>
-        </svg>
-      </div>
-
-      <!-- ACFE -->
-      <div class="pm-item">
-        <svg width="60" height="28" viewBox="0 0 60 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="30" cy="14" r="12" stroke="white" stroke-width="1.5" fill="none"/>
-          <text x="30" y="19" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle" letter-spacing="0.5">ACFE</text>
-        </svg>
-      </div>
-
-      <!-- IIA -->
-      <div class="pm-item">
-        <svg width="80" height="28" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <text x="0" y="22" font-family="Arial,sans-serif" font-size="22" font-weight="900" fill="white" letter-spacing="-1">IIA</text>
-          <rect x="38" y="4" width="42" height="1.5" fill="rgba(255,255,255,0.4)"/>
-          <text x="38" y="16" font-family="Arial,sans-serif" font-size="8" fill="rgba(255,255,255,0.6)" letter-spacing="0.3">INTERNAL</text>
-          <text x="38" y="26" font-family="Arial,sans-serif" font-size="8" fill="rgba(255,255,255,0.6)" letter-spacing="0.3">AUDITORS</text>
-        </svg>
-      </div>
-
-      <!-- OWASP -->
-      <div class="pm-item">
-        <svg width="100" height="28" viewBox="0 0 100 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="14" cy="14" rx="11" ry="11" stroke="white" stroke-width="1.5" fill="none"/>
-          <line x1="14" y1="3" x2="14" y2="25" stroke="white" stroke-width="1" opacity="0.5"/>
-          <path d="M8 7 Q14 14 20 21" stroke="white" stroke-width="1" fill="none" opacity="0.5"/>
-          <path d="M20 7 Q14 14 8 21" stroke="white" stroke-width="1" fill="none" opacity="0.5"/>
-          <text x="30" y="20" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="white" letter-spacing="1">OWASP</text>
-        </svg>
-      </div>
-
-      <!-- WiCyS -->
-      <div class="pm-item">
-        <svg width="80" height="28" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 4 L10 20 L16 10 L22 20 L28 4" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <text x="34" y="20" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="white">WiCyS</text>
-        </svg>
-      </div>
+      <div class="pm-item"><img src="/imgs/logos/Frame.svg" alt="IBM" height="28"></div>
+      <div class="pm-item"><img src="/imgs/logos/Vector-1.svg" alt="Amazon AWS" height="22"></div>
+      <div class="pm-item"><img src="/imgs/logos/Google_2015_logo%201.svg" alt="Google Cloud" height="24"></div>
+      <div class="pm-item"><img src="/imgs/logos/Frame-4.svg" alt="GoDaddy" height="28"></div>
+      <div class="pm-item"><img src="/imgs/logos/Group.svg" alt="Microsoft" height="28"></div>
+      <div class="pm-item"><img src="/imgs/logos/Frame-1.svg" alt="Cisco" height="36"></div>
+      <div class="pm-item"><img src="/imgs/logos/Frame-5.svg" alt="U.S. Dept. of Homeland Security" height="36"></div>
+      <div class="pm-item"><img src="/imgs/logos/Group-2.svg" alt="Spectrum" height="20"></div>
+      <div class="pm-item"><img src="/imgs/logos/Group-3.svg" alt="IAPP" height="28"></div>
+      <div class="pm-item"><img src="/imgs/logos/Frame-2.svg" alt="APWG" height="28"></div>
+      <div class="pm-item"><img src="/imgs/logos/Frame-3.svg" alt="ISACA" height="36"></div>
+      <div class="pm-item"><img src="/imgs/logos/Group-1.svg" alt="Identity Management Institute" height="32"></div>
+      <div class="pm-item"><img src="/imgs/logos/Group-4.svg" alt="(ISC)²" height="28"></div>
+      <div class="pm-item"><img src="/imgs/logos/Vector.svg" alt="ACFE" height="36"></div>
+      <div class="pm-item"><img src="/imgs/logos/Frame-6.svg" alt="IIA" height="32"></div>
+      <div class="pm-item"><img src="/imgs/logos/Frame-7.svg" alt="OWASP" height="36"></div>
+      <div class="pm-item"><img src="/imgs/logos/Frame-8.svg" alt="WiCyS" height="28"></div>
 
       <!-- ── SET 2 (duplicate for seamless loop) ── -->
-      <div class="pm-item"><svg width="66" height="26" viewBox="0 0 66 26" fill="none"><rect x="0" y="0" width="10" height="3.2" rx=".4" fill="white"/><rect x="0" y="4.8" width="10" height="3.2" rx=".4" fill="white"/><rect x="2" y="9.6" width="6" height="3.2" rx=".4" fill="white"/><rect x="2" y="14.4" width="6" height="3.2" rx=".4" fill="white"/><rect x="0" y="19.2" width="10" height="3.2" rx=".4" fill="white"/><rect x="0" y="24" width="10" height="2" rx=".4" fill="white"/><rect x="14" y="0" width="10" height="26" rx=".4" fill="white"/><rect x="28" y="0" width="10" height="3.2" rx=".4" fill="white"/><rect x="28" y="0" width="3" height="13" rx=".4" fill="white"/><rect x="28" y="22.8" width="10" height="3.2" rx=".4" fill="white"/><rect x="35" y="11.4" width="3" height="3.2" rx=".4" fill="white"/><rect x="28" y="11.4" width="10" height="3.2" rx=".4" fill="white"/><rect x="35" y="0" width="3" height="13" rx=".4" fill="white"/><rect x="28" y="13" width="3" height="13" rx=".4" fill="white"/><rect x="35" y="13" width="3" height="13" rx=".4" fill="white"/><rect x="42" y="0" width="10" height="3.2" rx=".4" fill="white"/><rect x="42" y="4.8" width="10" height="3.2" rx=".4" fill="white"/><rect x="44" y="9.6" width="6" height="3.2" rx=".4" fill="white"/><rect x="44" y="14.4" width="6" height="3.2" rx=".4" fill="white"/><rect x="42" y="19.2" width="10" height="3.2" rx=".4" fill="white"/><rect x="42" y="24" width="10" height="2" rx=".4" fill="white"/></svg></div>
-      <div class="pm-item"><svg width="60" height="36" viewBox="0 0 60 36" fill="none"><text x="30" y="17" font-family="Arial,sans-serif" font-size="17" font-weight="800" fill="white" text-anchor="middle" letter-spacing="-0.5">aws</text><path d="M13 27 Q30 33 47 27" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M44 24 L47 27 L44 30" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="pm-item"><svg width="120" height="28" viewBox="0 0 120 28" fill="none"><text x="0" y="21" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="white" letter-spacing="-0.3">Google</text><text x="74" y="21" font-family="Arial,sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.7)" letter-spacing="-0.3">Cloud</text></svg></div>
-      <div class="pm-item"><svg width="100" height="28" viewBox="0 0 100 28" fill="none"><text x="0" y="21" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="white">GoDaddy</text></svg></div>
-      <div class="pm-item"><svg width="132" height="28" viewBox="0 0 132 28" fill="none"><rect x="0" y="0" width="12" height="12" fill="rgba(255,255,255,0.9)"/><rect x="14" y="0" width="12" height="12" fill="rgba(255,255,255,0.6)"/><rect x="0" y="14" width="12" height="12" fill="rgba(255,255,255,0.6)"/><rect x="14" y="14" width="12" height="12" fill="rgba(255,255,255,0.9)"/><text x="32" y="21" font-family="'Segoe UI',Arial,sans-serif" font-size="15" font-weight="300" fill="white">Microsoft</text></svg></div>
-      <div class="pm-item"><svg width="80" height="34" viewBox="0 0 80 34" fill="none"><rect x="0" y="6" width="6" height="12" rx="1" fill="white"/><rect x="9" y="2" width="6" height="20" rx="1" fill="white"/><rect x="18" y="0" width="6" height="24" rx="1" fill="white"/><rect x="27" y="2" width="6" height="20" rx="1" fill="white"/><rect x="36" y="6" width="6" height="12" rx="1" fill="white"/><text x="0" y="34" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="1">cisco</text></svg></div>
-      <div class="pm-item"><svg width="62" height="36" viewBox="0 0 62 36" fill="none"><path d="M31 2 L58 12 L58 22 Q58 30 31 34 Q4 30 4 22 L4 12 Z" stroke="white" stroke-width="1.5" fill="none"/><text x="31" y="21" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="white" text-anchor="middle" letter-spacing="0.5">DHS</text></svg></div>
-      <div class="pm-item"><svg width="90" height="24" viewBox="0 0 90 24" fill="none"><text x="0" y="18" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="white" letter-spacing="-0.3">Spectrum</text><text x="84" y="18" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="rgba(255,255,255,0.6)">›</text></svg></div>
-      <div class="pm-item"><svg width="54" height="28" viewBox="0 0 54 28" fill="none"><text x="0" y="24" font-family="Georgia,serif" font-size="26" font-weight="400" fill="white" letter-spacing="-1">iapp</text></svg></div>
-      <div class="pm-item"><svg width="72" height="28" viewBox="0 0 72 28" fill="none"><rect x="0" y="0" width="72" height="28" rx="2" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/><text x="36" y="20" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle" letter-spacing="1.5">APWG</text></svg></div>
-      <div class="pm-item"><svg width="80" height="28" viewBox="0 0 80 28" fill="none"><circle cx="8" cy="8" r="3" fill="white" opacity="0.8"/><circle cx="20" cy="4" r="3" fill="white" opacity="0.8"/><circle cx="32" cy="4" r="3" fill="white" opacity="0.8"/><circle cx="44" cy="8" r="3" fill="white" opacity="0.8"/><text x="0" y="26" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="white" letter-spacing="2">ISACA</text></svg></div>
-      <div class="pm-item"><svg width="50" height="36" viewBox="0 0 50 36" fill="none"><circle cx="25" cy="10" r="8" stroke="white" stroke-width="1.5" fill="none"/><path d="M10 34 Q25 22 40 34" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/><text x="25" y="13" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="white" text-anchor="middle">IMI</text></svg></div>
-      <div class="pm-item"><svg width="60" height="28" viewBox="0 0 60 28" fill="none"><text x="0" y="22" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="white">(ISC)</text><text x="50" y="14" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white">2</text></svg></div>
-      <div class="pm-item"><svg width="60" height="28" viewBox="0 0 60 28" fill="none"><circle cx="30" cy="14" r="12" stroke="white" stroke-width="1.5" fill="none"/><text x="30" y="19" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle" letter-spacing="0.5">ACFE</text></svg></div>
-      <div class="pm-item"><svg width="80" height="28" viewBox="0 0 80 28" fill="none"><text x="0" y="22" font-family="Arial,sans-serif" font-size="22" font-weight="900" fill="white" letter-spacing="-1">IIA</text><rect x="38" y="4" width="42" height="1.5" fill="rgba(255,255,255,0.4)"/><text x="38" y="16" font-family="Arial,sans-serif" font-size="8" fill="rgba(255,255,255,0.6)" letter-spacing="0.3">INTERNAL</text><text x="38" y="26" font-family="Arial,sans-serif" font-size="8" fill="rgba(255,255,255,0.6)" letter-spacing="0.3">AUDITORS</text></svg></div>
-      <div class="pm-item"><svg width="100" height="28" viewBox="0 0 100 28" fill="none"><ellipse cx="14" cy="14" rx="11" ry="11" stroke="white" stroke-width="1.5" fill="none"/><line x1="14" y1="3" x2="14" y2="25" stroke="white" stroke-width="1" opacity="0.5"/><path d="M8 7 Q14 14 20 21" stroke="white" stroke-width="1" fill="none" opacity="0.5"/><path d="M20 7 Q14 14 8 21" stroke="white" stroke-width="1" fill="none" opacity="0.5"/><text x="30" y="20" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="white" letter-spacing="1">OWASP</text></svg></div>
-      <div class="pm-item"><svg width="80" height="28" viewBox="0 0 80 28" fill="none"><path d="M4 4 L10 20 L16 10 L22 20 L28 4" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="34" y="20" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="white">WiCyS</text></svg></div>
+      <div class="pm-item"><img src="/imgs/logos/Frame.svg" alt="IBM" height="28"></div>
+      <div class="pm-item"><img src="/imgs/logos/Vector-1.svg" alt="Amazon AWS" height="22"></div>
+      <div class="pm-item"><img src="/imgs/logos/Google_2015_logo%201.svg" alt="Google Cloud" height="24"></div>
+      <div class="pm-item"><img src="/imgs/logos/Frame-4.svg" alt="GoDaddy" height="28"></div>
+      <div class="pm-item"><img src="/imgs/logos/Group.svg" alt="Microsoft" height="28"></div>
+      <div class="pm-item"><img src="/imgs/logos/Frame-1.svg" alt="Cisco" height="36"></div>
+      <div class="pm-item"><img src="/imgs/logos/Frame-5.svg" alt="U.S. Dept. of Homeland Security" height="36"></div>
+      <div class="pm-item"><img src="/imgs/logos/Group-2.svg" alt="Spectrum" height="20"></div>
+      <div class="pm-item"><img src="/imgs/logos/Group-3.svg" alt="IAPP" height="28"></div>
+      <div class="pm-item"><img src="/imgs/logos/Frame-2.svg" alt="APWG" height="28"></div>
+      <div class="pm-item"><img src="/imgs/logos/Frame-3.svg" alt="ISACA" height="36"></div>
+      <div class="pm-item"><img src="/imgs/logos/Group-1.svg" alt="Identity Management Institute" height="32"></div>
+      <div class="pm-item"><img src="/imgs/logos/Group-4.svg" alt="(ISC)²" height="28"></div>
+      <div class="pm-item"><img src="/imgs/logos/Vector.svg" alt="ACFE" height="36"></div>
+      <div class="pm-item"><img src="/imgs/logos/Frame-6.svg" alt="IIA" height="32"></div>
+      <div class="pm-item"><img src="/imgs/logos/Frame-7.svg" alt="OWASP" height="36"></div>
+      <div class="pm-item"><img src="/imgs/logos/Frame-8.svg" alt="WiCyS" height="28"></div>
 
     </div>
   </div>
