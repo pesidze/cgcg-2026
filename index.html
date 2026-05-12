@@ -1796,7 +1796,7 @@
   .site-nav.nav-light .nav-cta{background:#0a1020;color:#fff}
   .site-nav.nav-light .nav-burger span{background:#0a1020}
   .nav-logo{display:flex;align-items:center;flex-shrink:0;padding:2px 4px 2px 0}
-  .nav-logo img{height:30px;width:auto;display:block;transition:height .25s ease}
+  .nav-logo img{height:30px;width:auto;display:block;transition:height .25s ease}.nav-logo-icon{display:none}
   .site-nav.scrolled .nav-logo img{height:26px}
   .nav-links{list-style:none;display:flex;gap:2px;margin:0 auto;padding:0 6px;align-items:center}
   .nav-links>li>a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:13.5px;letter-spacing:-.005em;padding:8px 14px;border-radius:999px;transition:color .14s ease,background .14s ease;white-space:nowrap}
@@ -1839,7 +1839,7 @@
 .nav-drawer-links a:active{color:#fff}
   @media(max-width:1100px){.site-nav .nav-links li:not(.nav-has-drop){display:none}}
   @media(max-width:768px){.site-nav{top:12px;padding:5px 5px 5px 14px;gap:8px;width:calc(100% - 20px);max-width:560px;background:rgba(10,16,32,0.78);border:1px solid rgba(255,255,255,0.1);box-shadow:0 14px 36px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.08)}
-.nav-links,.nav-cta{display:none}
+.nav-logo-full{display:none}.nav-logo-icon{display:block;height:30px;width:auto}.nav-links,.nav-cta{display:none}
 .nav-status-mobile{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;flex-shrink:0;background:rgba(200,255,71,0.1);border:1px solid rgba(200,255,71,0.2);margin-right:auto;margin-left:2px}
 .nav-status-mobile .nav-status-dot{width:7px;height:7px;border-radius:50%;background:#C8FF47;box-shadow:0 0 8px rgba(200,255,71,0.7);animation:navPulse 1.8s ease-in-out infinite}
 .nav-cta-mobile{display:inline-flex;align-items:center;gap:6px;background:#C8FF47;color:#0a1020;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:12.5px;font-family:'NB',sans-serif;font-weight:700;letter-spacing:-.005em;white-space:nowrap;flex-shrink:0;transition:background .15s ease,transform .15s ease}
@@ -1865,7 +1865,7 @@
 <body>
 
   <nav class="site-nav" id="site-nav">
-    <a class="nav-logo" href="/"><img src="/imgs/logowhite.svg" alt="Cyber Guardian Consulting Group"></a>
+    <a class="nav-logo" href="/"><img class="nav-logo-full" src="/imgs/logowhite.svg" alt="CGCG"><img class="nav-logo-icon" src="/logowhite.svg" alt="CGCG"><img class="nav-logo-icon" src="/logowhite.svg" alt="CGCG"></a>
     <ul class="nav-links" role="list">
       <li class="nav-has-drop">
         <a class="nav-link-services" href="/services/">Services<svg class="nav-drop-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
