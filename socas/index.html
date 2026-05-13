@@ -319,7 +319,7 @@ img.nav-logo-full{display:none}img.nav-logo-icon{display:block;height:30px;width
   .footer-main{grid-template-columns:1fr;padding:48px 24px;gap:48px}.footer-bottom{padding:24px 24px 36px}
 }
 @media(max-width:480px){.svc-grid{grid-template-columns:1fr}.hero-headline{font-size:36px}.indg-grid{grid-template-columns:1fr}.process-steps{grid-template-columns:1fr}}
-.partner-bar{background:#f5f5f3;border-top:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8;padding:24px 80px;overflow-x:auto;scrollbar-width:none}.partner-bar::-webkit-scrollbar{display:none}.partner-bar-inner{max-width:1440px;margin:0 auto;display:flex;align-items:center;gap:28px;flex-wrap:nowrap;min-width:max-content}.partner-label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(0,0,0,.35);white-space:nowrap;flex-shrink:0}.partner-divider{width:1px;height:18px;background:rgba(0,0,0,.15);flex-shrink:0}.partner-badges{display:flex;align-items:center;gap:0;flex-wrap:nowrap}.pbadge{font-size:12px;color:rgba(0,0,0,.5);white-space:nowrap;padding:0 16px;border-right:1px solid rgba(0,0,0,.1);letter-spacing:.02em}.pbadge:last-child{border-right:none}</style>
+.partners-marquee{background:#0a1020;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:28px 0;overflow:hidden}.pm-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.28);text-align:center;margin-bottom:22px;font-family:'NL',sans-serif}.pm-viewport{overflow:hidden;width:100%;position:relative}.pm-viewport::before,.pm-viewport::after{content:'';position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none}.pm-viewport::before{left:0;background:linear-gradient(to right,#0a1020,transparent)}.pm-viewport::after{right:0;background:linear-gradient(to left,#0a1020,transparent)}@keyframes pm-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}.pm-track{display:flex;align-items:center;width:max-content;animation:pm-scroll 48s linear infinite}.pm-track:hover{animation-play-state:paused}.pm-item{display:flex;align-items:center;justify-content:center;padding:0 48px;opacity:.55;transition:opacity .2s ease;flex-shrink:0}.pm-item:hover{opacity:1}.pm-item svg,.pm-item img{display:block}.pm-item img{filter:brightness(0) invert(1)}</style>
 </head>
 <body>
 
@@ -477,30 +477,47 @@ img.nav-logo-full{display:none}img.nav-logo-icon{display:block;height:30px;width
     <div class="hstat"><div class="hstat-num">Top 3%</div><div class="hstat-body">of alerts are real threats — our analysts filter the noise so you don't have to</div></div>
   </div>
 </section>
-<div class="partner-bar" aria-label="Certifications and partnerships">
-  <div class="partner-bar-inner">
-    <span class="partner-label">Certified &amp; partnered with</span>
-    <div class="partner-divider" aria-hidden="true"></div>
-    <div class="partner-badges">
-      <span class="pbadge">IBM</span>
-      <span class="pbadge">Amazon AWS</span>
-      <span class="pbadge">Google Cloud</span>
-      <span class="pbadge">GoDaddy</span>
-      <span class="pbadge">Microsoft</span>
-      <span class="pbadge">Cisco</span>
-      <span class="pbadge">U.S. Dept. of Homeland Security</span>
-      <span class="pbadge">Spectrum</span>
-      <span class="pbadge">IAPP</span>
-      <span class="pbadge">APWG</span>
-      <span class="pbadge">ISACA</span>
-      <span class="pbadge">Identity Mgmt. Institute</span>
-      <span class="pbadge">(ISC)&#178;</span>
-      <span class="pbadge">ACFE</span>
-      <span class="pbadge">IIA</span>
-      <span class="pbadge">OWASP</span>
-      <span class="pbadge">WiCyS</span>
+<section class="partners-marquee" aria-label="Certifications and Partnerships">
+  <p class="pm-label">Certifications &amp; Partnerships</p>
+  <div class="pm-viewport" aria-hidden="true">
+    <div class="pm-track">
+      <div class="pm-item"><img src="../imgs/logos/Frame.svg" alt="IBM" height="28"></div>
+      <div class="pm-item"><img src="../imgs/logos/Vector-1.svg" alt="Amazon AWS" height="22"></div>
+      <div class="pm-item"><img src="../imgs/logos/Google_2015_logo%201.svg" alt="Google Cloud" height="24"></div>
+      <div class="pm-item"><img src="../imgs/logos/Frame-4.svg" alt="GoDaddy" height="28"></div>
+      <div class="pm-item"><img src="../imgs/logos/Group.svg" alt="Microsoft" height="28"></div>
+      <div class="pm-item"><img src="../imgs/logos/Frame-1.svg" alt="Cisco" height="36"></div>
+      <div class="pm-item"><img src="../imgs/logos/Frame-5.svg" alt="U.S. Dept. of Homeland Security" height="36"></div>
+      <div class="pm-item"><img src="../imgs/logos/Group-2.svg" alt="Spectrum" height="20"></div>
+      <div class="pm-item"><img src="../imgs/logos/Group-3.svg" alt="IAPP" height="28"></div>
+      <div class="pm-item"><img src="../imgs/logos/Frame-2.svg" alt="APWG" height="28"></div>
+      <div class="pm-item"><img src="../imgs/logos/Frame-3.svg" alt="ISACA" height="36"></div>
+      <div class="pm-item"><img src="../imgs/logos/Group-1.svg" alt="Identity Management Institute" height="32"></div>
+      <div class="pm-item"><img src="../imgs/logos/Group-4.svg" alt="(ISC)²" height="28"></div>
+      <div class="pm-item"><img src="../imgs/logos/Vector.svg" alt="ACFE" height="36"></div>
+      <div class="pm-item"><img src="../imgs/logos/Frame-6.svg" alt="IIA" height="32"></div>
+      <div class="pm-item"><img src="../imgs/logos/Frame-7.svg" alt="OWASP" height="36"></div>
+      <div class="pm-item"><img src="../imgs/logos/Frame-8.svg" alt="WiCyS" height="28"></div>
+      <div class="pm-item"><img src="../imgs/logos/Frame.svg" alt="IBM" height="28"></div>
+      <div class="pm-item"><img src="../imgs/logos/Vector-1.svg" alt="Amazon AWS" height="22"></div>
+      <div class="pm-item"><img src="../imgs/logos/Google_2015_logo%201.svg" alt="Google Cloud" height="24"></div>
+      <div class="pm-item"><img src="../imgs/logos/Frame-4.svg" alt="GoDaddy" height="28"></div>
+      <div class="pm-item"><img src="../imgs/logos/Group.svg" alt="Microsoft" height="28"></div>
+      <div class="pm-item"><img src="../imgs/logos/Frame-1.svg" alt="Cisco" height="36"></div>
+      <div class="pm-item"><img src="../imgs/logos/Frame-5.svg" alt="U.S. Dept. of Homeland Security" height="36"></div>
+      <div class="pm-item"><img src="../imgs/logos/Group-2.svg" alt="Spectrum" height="20"></div>
+      <div class="pm-item"><img src="../imgs/logos/Group-3.svg" alt="IAPP" height="28"></div>
+      <div class="pm-item"><img src="../imgs/logos/Frame-2.svg" alt="APWG" height="28"></div>
+      <div class="pm-item"><img src="../imgs/logos/Frame-3.svg" alt="ISACA" height="36"></div>
+      <div class="pm-item"><img src="../imgs/logos/Group-1.svg" alt="Identity Management Institute" height="32"></div>
+      <div class="pm-item"><img src="../imgs/logos/Group-4.svg" alt="(ISC)²" height="28"></div>
+      <div class="pm-item"><img src="../imgs/logos/Vector.svg" alt="ACFE" height="36"></div>
+      <div class="pm-item"><img src="../imgs/logos/Frame-6.svg" alt="IIA" height="32"></div>
+      <div class="pm-item"><img src="../imgs/logos/Frame-7.svg" alt="OWASP" height="36"></div>
+      <div class="pm-item"><img src="../imgs/logos/Frame-8.svg" alt="WiCyS" height="28"></div>
     </div>
   </div>
+</section>
 </div>
 
 <!-- ── What This Means For You ── -->
